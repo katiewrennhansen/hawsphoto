@@ -13,6 +13,35 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
     <body>
+        <div id="quickview-modal" class="quickview-modal">
+            <span class="quickview-close-icon">X</span>
+            <div class="modal-flex-container">
+                <img class="quickview-image">
+                <div class="modal-content">
+                    <h3 class="quickview-title"></h3>
+                    <p class="quickview-price"></p>
+                    <p class="quickview-description"></p>
+                    <form class="modal-form">
+                        <label for="sizing-options">Select Size:
+                            <select id="sizing-options" name="sizing-options" required>
+                                <option>12x13</option>
+                                <option>12x15</option>
+                            </select>
+                        </label>
+                        <label for="view-options">Select View:
+                            <select id="view-options" name="view-options" required>
+                                <option value="landscape">Landscape</option>
+                                <option value="portrait">Portrait</option>
+                            </select>
+                        </label>
+                        <input type="submit" class="add-to-cart-btn btn" value="Add To Cart">
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-overlay"></div>
+
         <header class="shop">
             <nav>
                 <ul>
@@ -52,6 +81,7 @@
                 <p>Haws Photography. Website by <a href="https://katiewrennhansen.com" target="_blank">katiewrennhansen</a></p>
             </div>
         </footer>
+        <script src="image-data.js"></script>
         <script src="index.js"></script>
     </body>
 </html>
