@@ -1,37 +1,5 @@
-* {
-  scroll-behavior: smooth;
-  margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  background-color: #f4f1f5;
-  font-family: 'Open Sans', sans-serif;
-}
-
-h2 {
-  text-align: center;
-  text-transform: uppercase;
-  border-bottom: 2px solid #04041c;
-  margin: 20px 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  cursor: pointer;
-}
-
-header {
-  text-align: center;
-  background-image: url("../../dist/images/illusion.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh;
+header.shop nav ul li a {
+  color: #04041c;
 }
 
 header nav {
@@ -58,7 +26,6 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: white;
   text-transform: uppercase;
   padding-right: 20px;
 }
@@ -80,7 +47,55 @@ header nav ul li a:hover .underline {
   transition: 300ms linear;
 }
 
-header .homepage-container {
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f1f5;
+  font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 2px solid #04041c;
+  margin: 20px 0;
+  padding-bottom: 6px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+header.home {
+  background-image: url("../images/illusion.jpg");
+}
+
+header.home {
+  text-align: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+header.home nav ul li a {
+  color: white;
+}
+
+header.home nav ul li a:hover .underline {
+  background-color: white;
+}
+
+header.home .homepage-container {
   color: white;
   border: 1px solid white;
   width: 90%;
@@ -89,13 +104,13 @@ header .homepage-container {
   text-transform: uppercase;
 }
 
-header .homepage-container h1 {
+header.home .homepage-container h1 {
   font-size: 30px;
   letter-spacing: 0.1rem;
   font-family: 'Playfair Display', serif;
 }
 
-header .homepage-container .caption {
+header.home .homepage-container .caption {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,14 +122,14 @@ header .homepage-container .caption {
           justify-content: center;
 }
 
-header .homepage-container .caption .name-bar {
+header.home .homepage-container .caption .name-bar {
   width: 10px;
   height: 1px;
   margin: 0 5px;
   background-color: white;
 }
 
-header .shop-btn {
+header.home .shop-btn {
   border: 1px solid white;
   color: white;
   padding: 10px 30px;
@@ -123,7 +138,7 @@ header .shop-btn {
   transition: all 300ms linear;
 }
 
-header .shop-btn:hover {
+header.home .shop-btn:hover {
   background: white;
   color: #171616;
   -webkit-transition: all 300ms linear;
@@ -140,6 +155,10 @@ header .shop-btn:hover {
   border: 2px solid #04041c;
 }
 
+.about .image-signature {
+  display: none;
+}
+
 .about .about-content p {
   line-height: 1.5;
   margin: 10px 0;
@@ -151,7 +170,7 @@ header .shop-btn:hover {
 
 .contact .icons {
   width: 40%;
-  margin: 0 auto;
+  margin: 30px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,9 +179,22 @@ header .shop-btn:hover {
           justify-content: space-evenly;
 }
 
-.contact .icons a i {
-  font-size: 20px;
+.contact .icons .email,
+.contact .icons .instagram {
+  text-align: center;
+}
+
+.contact .icons a {
   color: #04041c;
+}
+
+.contact .icons a i {
+  font-size: 25px;
+  color: #04041c;
+}
+
+.contact .icons a span {
+  font-size: 12px;
 }
 
 .contact form label {
@@ -182,7 +214,7 @@ header .shop-btn:hover {
 }
 
 .contact form textarea {
-  height: 60px;
+  height: 100px;
 }
 
 .contact form input[type="submit"] {
@@ -209,6 +241,10 @@ footer a {
   color: #f4f1f5;
 }
 
+footer .about {
+  font-size: 300px;
+}
+
 @media (min-width: 767px) {
   header nav a {
     padding-right: 40px;
@@ -219,6 +255,37 @@ footer a {
   }
   header .homepage-container h1 {
     font-size: 50px;
+  }
+  .about {
+    padding: 60px;
+  }
+  .about .about-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .about .about-container .image-container img {
+    width: 40vw;
+    margin-right: 20px;
+  }
+  .about .about-container .image-container .image-signature {
+    display: block;
+  }
+  .about .about-container .about-content p {
+    margin: 0 0 20px 0;
+  }
+  .about .about-container .about-content .signature {
+    display: none;
+  }
+  .contact {
+    padding: 60px;
+  }
+  .contact form {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 

@@ -1,0 +1,49 @@
+header nav {
+  padding-top: 30px;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+header nav ul li a {
+  text-transform: uppercase;
+  padding-right: 20px;
+}
+
+header nav ul li a .underline {
+  height: 1px;
+  width: 0px;
+  -webkit-transition: 300ms linear;
+  transition: 300ms linear;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav ul li a:hover .underline {
+  width: 100%;
+  background-color: white;
+  -webkit-transition: 300ms linear;
+  transition: 300ms linear;
+}
+
+header.shop nav ul li a {
+  color: #04041c;
+}
+/*# sourceMappingURL=shop.css.map */

@@ -1,4 +1,7 @@
-$main-color: $main-color;
+@import '_variables';
+@import 'home-page';
+@import 'shop';
+@import 'nav';
 
 * {
     scroll-behavior: smooth;
@@ -16,6 +19,7 @@ h2 {
     text-transform: uppercase;
     border-bottom: 2px solid $main-color;
     margin: 20px 0;
+    padding-bottom: 6px;
 }
 
 a {
@@ -25,40 +29,26 @@ a {
     }
 }
 
-header {
+header.home {
+    background-image: url('../images/illusion.jpg');
+}
+
+header.home {
     nav {
-        padding-top: 30px;
         ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            justify-content: center;
             li {
-                display: flex;
-                justify-content: space-around;
                 a {
                     color: white;
-                    text-transform: uppercase;
-                    padding-right: 20px;
-                    .underline {
-                        height: 1px;
-                        width: 0px;
-                        transition: 300ms linear;
-                        justify-content: center;
-                    }
                     &:hover {
                         .underline {
-                            width: 100%;
                             background-color: white;
-                            transition: 300ms linear;
                         }
                     }
                 }
             }
-        }
+        } 
     }
     text-align: center;
-    background-image: url('../images/illusion.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -108,6 +98,9 @@ header {
         margin: 0 auto;
         border: 2px solid $main-color;
     }
+    .image-signature {
+        display: none;
+    }
     .about-content {
         p {
             line-height: 1.5;
@@ -120,13 +113,21 @@ header {
     padding: 20px;
     .icons {
         width: 40%;
-        margin: 0 auto;
+        margin: 30px auto;
         display: flex;
         justify-content: space-evenly;
+        .email,
+        .instagram {
+            text-align: center;
+        }
         a {
+            color: $main-color;
             i {
-                font-size: 20px;
+                font-size: 25px;
                 color: $main-color;
+            }
+            span {
+                font-size: 12px;
             }
         }
     }
@@ -147,7 +148,7 @@ header {
             font-size: 14px;
         }
         textarea {
-            height: 60px;
+            height: 100px;
         }
         input[type="submit"] {
             transition: all 300ms linear;
@@ -171,6 +172,9 @@ footer {
     a {
         color: rgb(244, 241, 245);
     }
+    .about {
+        font-size: 300px;
+    }
 }
 
 
@@ -189,13 +193,40 @@ footer {
                 font-size: 50px;
             }
         }
-    }
+    } 
     .about {
+        padding: 60px;
         .about-container {
             display: flex;
+            justify-content: space-evenly;
+            .image-container {
+                img {
+                    width: 40vw;
+                    margin-right: 20px;
+                }
+                .image-signature {
+                    display: block;
+                }
+            }
+            .about-content {
+                p {
+                    margin: 0 0 20px 0;
+                }
+                .signature {
+                    display: none;
+                }
+            }
+        }
+    }
+    .contact {
+        padding: 60px;
+        form {
+            width: 50%;
+            margin: 0 auto;
         }
     }
 }
+
 
 
 @media (min-width: 1000px){

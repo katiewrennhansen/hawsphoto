@@ -1,0 +1,17 @@
+
+header.shop {
+    nav {
+        ul {
+            li {
+                a {
+                    color: $main-color;
+                    &:hover {
+                        .underline {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
