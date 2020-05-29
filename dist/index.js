@@ -69,5 +69,5 @@ quickviewForm.addEventListener('submit', (e) => {
         view: view.value
     }
     cart.push(selectedItem)
-    console.log(selectedItem)
+    window.localStorage.setItem('cart', JSON.stringify(cart));
 })
