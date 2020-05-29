@@ -58,7 +58,7 @@ header {
         }
     }
     text-align: center;
-    background-image: url('../../dist/images/illusion.jpg');
+    background-image: url('../images/illusion.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -188,6 +188,11 @@ footer {
             h1 {
                 font-size: 50px;
             }
+        }
+    }
+    .about {
+        .about-container {
+            display: flex;
         }
     }
 }
