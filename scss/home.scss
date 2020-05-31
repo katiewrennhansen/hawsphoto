@@ -38,7 +38,6 @@ a {
 form {
     label {
         display: block;
-        
     }
     input[type="text"],
     input[type="submit"],
@@ -51,18 +50,37 @@ form {
         margin: 5px 0;
         font-family: 'Poppins', sans-serif;
         font-size: 14px;
+        font-family: 'Poppins', sans-serif;
     }
     textarea {
         height: 100px;
     }
+    // input[type="submit"] {
+    //     transition: all 300ms linear;
+    //     font-family: 'Poppins', sans-serif;
+    //     &:hover {
+    //         cursor: pointer;
+    //         background-color: $main-color;
+    //         color: white;
+    //         transition: all 300ms linear;
+    //     }
+    // }
     input[type="submit"] {
+        background-color: $main-color;
+        border: 1px solid $main-color;
+        color: #fff;
+        width: 100px;
+        height: 50px;
+        text-transform: uppercase;
+        font-size: 20px;
+        transform: translateY(-40px);
         transition: all 300ms linear;
+        font-family: 'Poppins', sans-serif;
         &:hover {
             cursor: pointer;
-            background-color: $main-color;
-            color: white;
+            background-color: #fff;
+            color: $main-color;
             transition: all 300ms linear;
-
         }
     }
     select {
@@ -78,6 +96,10 @@ form {
         background-position: 90% 50%;
         background-size: 10px;
         background-color: white;
+        font-family: 'Poppins', sans-serif;
+        option {
+            font-family: 'Poppins', sans-serif;
+        }
     }
 }
 
@@ -365,6 +387,23 @@ footer {
 
 
 // SHOP
+
+.shop {
+    nav {
+        ul {
+            li {
+                a {
+                    color: $main-color;
+                    &:hover {
+                        .underline {
+                            background-color: $main-color;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+}
 .quickview-modal {
     display: none;
 }
@@ -382,9 +421,9 @@ footer {
         background: white;
         position: fixed;
         height: auto;
-        width: 80%;
+        width: 90%;
         left: 50%;
-        margin-left: -40%;
+        margin-left: -45%;
         top: 10%;
         margin-top: -50px;
         z-index: 300;
@@ -393,32 +432,43 @@ footer {
         .quickview-close-icon {
             position: absolute;
             right: 20px;
+            z-index: 350;
+            transition: all 300ms linear;
             &:hover {
                 cursor: pointer;
+                color: #04041c98;
+                transition: all 300ms linear;
             }
         }
         .modal-flex-container {
-            display: flex;
             .quickview-image {
-                width: 40%;
+                display: none;
             }
             .modal-content {
-                padding: 0 20px;
                 form {
                     margin: 20px 0;
                     label {
-                        display: block;
+                        font-size: 14px;
                     }
                 }
                 .add-to-cart-btn {
                     border: 1px solid $main-color;
-                    color: $main-color;
+                    background-color: $main-color;
+                    color: white;
                     &:hover {
                         cursor: pointer;
-                        background: $main-color;
-                        color: white;
+                        background: white;
+                        color: $main-color;
                     }
-                }          
+                } 
+                .shipping-policy {
+                    font-size: 14px;
+                    margin: 30px 0 0 0;
+                    h4 {
+                        font-size: 15px;
+                        margin: 0 0 6px;
+                    }
+                }         
             }
         }
     }
@@ -430,7 +480,7 @@ footer {
         display: flex;
         flex-wrap: wrap;
         .product-item {
-            width: 33.33%;
+            width: 100%;
             .modal {
                 display: none;
             }
@@ -469,14 +519,119 @@ footer {
                     }
                 }
             }
-            
         } 
     }
 }
 
 
 @media (min-width: 767px){
+    .modal-open {
+        .quickview-modal {
+            .quickview-close-icon {
+                top: 15px;
+            }
+            .modal-flex-container {
+                display: flex;
+                .quickview-image {
+                    width: 50%;
+                    display: block;
+                }
+                .modal-content {
+                    padding: 0 20px;
+                    form {
+                        margin: 20px 0;
+                    } 
+                }
+            }
+        }
+    }    
     .products {
         padding: 60px;
+        .product-container {
+            .product-item {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1000px){
+    .modal-open {
+        .quickview-modal {
+            width: 70%;
+            left: 50%;
+            margin-left: -35%;
+            padding: 25px;
+            .modal-flex-container {
+                .quickview-image {
+                    width: 45%;
+                }
+            }
+        }
+    }    
+    .products {
+        .product-container {
+            .product-item {
+                width: 33.33%;
+            }
+        }
+    }
+}
+
+// CHECKOUT
+.checkout {
+    padding: 20px;
+    form {
+        font-size: 14px;
+        text-align: center;
+        h3, 
+        .cart-products {
+            text-align: left;
+        }
+        h3 {
+            margin-bottom: 6px;
+            // font-weight: 200;
+        }
+        .checkout-block {
+            margin-bottom: 30px;
+        }
+        select {
+            display: block;
+            width: 100%;
+            height: 35px;
+            background-position: 96% 50%;
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        input[type="submit"]{
+            transform: translateY(-70px);
+        }
+    }
+}
+
+@media (min-width: 767px){
+    .checkout {
+        padding: 60px;
+        form {
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (min-width: 1000px){
+    .checkout {
+        padding: 80px;
+        h2 {
+            width: 70%;
+            margin: 0 auto 40px;
+        }
+        form {
+            width: 50%;
+            select {
+                background-position: 98% 50%;
+            }
+        }
     }
 }

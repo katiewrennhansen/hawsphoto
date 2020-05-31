@@ -8,13 +8,15 @@
         <meta name="keywords" content="Andrew Haws, photography, nature photography, landscape photopraphy, landscape">
         <title>Andrew Haws Photography</title>
         <link rel="shortcut icon" type="image/x-icon" href="https://static.wixstatic.com/media/bea260_f82690ae87054c809a7406e0fd85a7fb~mv2.png/v1/fill/w_132,h_90,al_c,q_85,usm_0.66_1.00_0.01/Andrew-Haws-Logo-2.webp">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">       
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">       
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
     <body>
         <div id="quickview-modal" class="quickview-modal">
-            <span class="quickview-close-icon">X</span>
+            <span class="quickview-close-icon">
+                <i class="fas fa-times"></i>
+            </span>
             <div class="modal-flex-container">
                 <img class="quickview-image">
                 <div class="modal-content">
@@ -22,24 +24,26 @@
                     <p class="quickview-price"></p>
                     <p class="quickview-description"></p>
                     <form class="modal-form">
-                        <label for="sizing-options">Size Options:
+                        <div class="form-option">
+                            <label for="sizing-options">Size Options: </label>
                             <select id="sizing-options" name="sizing-options" required>
                                 <option>12x13</option>
                                 <option>12x15</option>
-                            </select>
-                        </label>
-                        <label for="view-options">View Options:
+                            </select>   
+                        </div>
+                        <div class="form-option">
+                            <label for="view-options">View Options: </label>
                             <select id="view-options" name="view-options" required>
                                 <option value="landscape">Landscape</option>
                                 <option value="portrait">Portrait</option>
                             </select>
-                        </label>
+                        </div>
                     </form>
                     <a href="cart.html" class="add-to-cart-btn btn">Contact to Purchase</a>
 
                     <div class="shipping-policy">
                         <h4>Shipping Policy</h4>
-                        <p>Shipping prices will determine on the size and destination. All products will be shipped from California</p>
+                        <p>Shipping prices will determine on the size and destination. All products will be shipped from California. For more information, contact Andrew Haws.</p>
                     </div>
                 </div>
             </div>
@@ -84,6 +88,11 @@
         <footer>
             <div class="copyright">
                 <p>© 2019. Andrew Haws Landscape Photography. All Rights Reserved. Website by <a href="https://katiewrennhansen.com" target="_blank">katiewrennhansen</a></p>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/haws_photography" aria-label="Visit the Andrew Haws Instagram page" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </footer>
         <script src="image-data.js"></script>

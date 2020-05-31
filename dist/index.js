@@ -12,7 +12,6 @@ let cart = [];
 
 images.forEach(image => createProductItem(image));
 
-
 function createProductItem(image){
     //create product grid item
     const container = document.createElement('div');
@@ -37,11 +36,10 @@ function createProductItem(image){
         activeImage = image;
         quickviewModal.style.display = 'block';
         quickviewTitle.textContent = `${image.name}`;
-        quickviewPrice.textContent = `$${image.price}`;
+        quickviewPrice.textContent = `$${image.price[0]} - $${image.price[1]} `;
         quickviewDescription.textContent = `${image.description}`;
         quickviewImage.setAttribute('src', image.imagePath);
     })
-
 
     //append everything to everyhthing
     productImageContainer.appendChild(productImage);
@@ -50,24 +48,7 @@ function createProductItem(image){
     productGrid.appendChild(container);
 }
 
-
-
 quickviewCloseIcon.addEventListener('click', () => {
     document.querySelector('body').classList.remove('modal-open')
     quickviewModal.style.display = 'none';
 })
-
-
-// quickviewForm.addEventListener('submit', (e) => {
-    // const size = document.getElementById('sizing-options')
-    // const view = document.getElementById('view-options')
-    // e.preventDefault();
-    // let selectedItem = {
-    //     image: activeImage.name,
-    //     price: activeImage.price,
-    //     size: size.value,
-    //     view: view.value
-    // }
-    // cart.push(selectedItem)
-    // window.localStorage.setItem('cart', JSON.stringify(cart));
-// })

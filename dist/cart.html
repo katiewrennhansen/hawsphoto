@@ -8,7 +8,7 @@
         <meta name="keywords" content="Andrew Haws, photography, nature photography, landscape photopraphy, landscape">
         <title>Andrew Haws Photography</title>
         <link rel="shortcut icon" type="image/x-icon" href="https://static.wixstatic.com/media/bea260_f82690ae87054c809a7406e0fd85a7fb~mv2.png/v1/fill/w_132,h_90,al_c,q_85,usm_0.66_1.00_0.01/Andrew-Haws-Logo-2.webp">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">       
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100;200;300&display=swap" rel="stylesheet">       
         <link rel="stylesheet" href="css/home.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
@@ -42,21 +42,25 @@
         </header>
 
         <section class="checkout">
+            <h2>Contact Andrew</h2>
             <form action="https://formspree.io/myynwgja" method="POST">
-                <label for="customer-first-name">
-                    <input type="text" name="customer-first-name" placeholder="First Name*" required>
-                </label>
-                <label for="customer-last-name">
-                    <input type="text" name="customer-last-name" placeholder="Last Name*" required>
-                </label>
-                <label>
-                    <input type="email" name="customer-email" placeholder="Email*" required>
-                </label>
-                <label>
-                    <input type="text" name="customer-phone" placeholder="Phone*">
-                </label>
-                <div class="cart-products">
-                    <h3>Select Products</h3>
+                <div class="checkout-block checkout-contact">
+                    <h3>Enter your contact information: </h3>
+                    <label for="customer-first-name">
+                        <input type="text" name="customer-first-name" placeholder="First Name*" required>
+                    </label>
+                    <label for="customer-last-name">
+                        <input type="text" name="customer-last-name" placeholder="Last Name*" required>
+                    </label>
+                    <label>
+                        <input type="email" name="customer-email" placeholder="Email*" required>
+                    </label>
+                    <label>
+                        <input type="text" name="customer-phone" placeholder="Phone*">
+                    </label>
+                </div>
+                <div class="checkout-block cart-products">
+                    <h3>Select Desired Photo: </h3>
                     <div class="cart-product">
                         <label for="cart-image">Select Photo:
                             <select name="cart-image" required>
@@ -73,14 +77,16 @@
                                 <option value="">Select Layout</option>
                             </select>
                         </label>
-                        <label for="cart-price">Product Price:
+                        <label for="cart-price">Calculated Price:
                             <input type="text" name="cart-price" disabled>
                         </label>
                     </div>
                 </div>
-                <button class="add-new-item btn" role="button">Add New Product</button>
-
-                <textarea name="customer-message" placeholder="Message*"></textarea>
+                <!-- <button class="add-new-item btn" role="button">Add New Product</button> -->
+                <div class="checkout-block checkout-message">
+                    <h3>Enter a message: </h3>
+                    <textarea name="customer-message" placeholder="Message*" required></textarea>
+                </div>
                 <input type="submit" value="Send">
             </form>
 
@@ -88,7 +94,12 @@
 
         <footer>
             <div class="copyright">
-                <p>© 2019. Andrew Haws Landscape Photography. All Rights Reserved Website by <a href="https://katiewrennhansen.com" target="_blank">katiewrennhansen</a></p>
+                <p>© 2019. Andrew Haws Landscape Photography. All Rights Reserved. Website by <a href="https://katiewrennhansen.com" target="_blank">katiewrennhansen</a></p>
+            </div>
+            <div class="instagram">
+                <a href="https://www.instagram.com/haws_photography" aria-label="Visit the Andrew Haws Instagram page" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </footer>
         <script src="image-data.js"></script>
