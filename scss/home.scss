@@ -490,14 +490,15 @@ footer {
                 overflow:hidden;
                 img {
                     width: 100%;
+                    border: 2px solid $main-color;
                 }
                 .quickview {
                     text-transform: uppercase;
                     transform: translateY(50px);
                     opacity: 0;
                     position: absolute;
-                    left: 0;
-                    right: 0;
+                    left: 0px;
+                    right: 0px;
                     bottom: 5px;
                     width: 100%;
                     height: 50px;
@@ -532,9 +533,20 @@ footer {
             }
             .modal-flex-container {
                 display: flex;
-                .quickview-image {
-                    width: 50%;
-                    display: block;
+                .quickview-image-container {
+                    width: 100%;
+                    overflow: hidden;
+                    .quickview-image {
+                        width: 100%;
+                        display: block;
+                        transition: all 300ms linear;
+                    }
+                    &:hover {
+                        .quickview-image {
+                            transform: scale(1.5);
+                            transition: all 300ms linear;
+                        }    
+                    }
                 }
                 .modal-content {
                     padding: 0 20px;

@@ -576,6 +576,7 @@ footer .instagram a:hover {
 
 .products .product-container .product-item .product-image-container img {
   width: 100%;
+  border: 2px solid #04041c;
 }
 
 .products .product-container .product-item .product-image-container .quickview {
@@ -584,8 +585,8 @@ footer .instagram a:hover {
           transform: translateY(50px);
   opacity: 0;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 0px;
+  right: 0px;
   bottom: 5px;
   width: 100%;
   height: 50px;
@@ -619,9 +620,21 @@ footer .instagram a:hover {
     display: -ms-flexbox;
     display: flex;
   }
-  .modal-open .quickview-modal .modal-flex-container .quickview-image {
-    width: 50%;
+  .modal-open .quickview-modal .modal-flex-container .quickview-image-container {
+    width: 100%;
+    overflow: hidden;
+  }
+  .modal-open .quickview-modal .modal-flex-container .quickview-image-container .quickview-image {
+    width: 100%;
     display: block;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+  }
+  .modal-open .quickview-modal .modal-flex-container .quickview-image-container:hover .quickview-image {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
   }
   .modal-open .quickview-modal .modal-flex-container .modal-content {
     padding: 0 20px;
