@@ -548,6 +548,10 @@ footer .instagram a:hover {
   margin: 0 0 6px;
 }
 
+.modal-open .products .product-container .product-item .product-image-container img {
+  opacity: 0.7;
+}
+
 .products {
   padding: 20px;
 }

@@ -25,6 +25,7 @@ function createProductItem(image){
     const productImage = document.createElement('img');
     productImage.setAttribute('src', image.imagePath);
     productImage.setAttribute('alt', image.name);
+    productImage.classList.add('shop-product-image');
 
 
     //create quickview button
