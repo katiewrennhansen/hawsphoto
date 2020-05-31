@@ -33,11 +33,6 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">Cart
-                            <div class="underline"></div>
-                        </a>
-                    </li>
-                    <li>
                         <a href="../index.html#contact">Contact
                             <div class="underline"></div>
                         </a>
@@ -47,21 +42,45 @@
         </header>
 
         <section class="checkout">
-            <ul class="product-cart">
+            <form action="https://formspree.io/myynwgja" method="POST">
+                <label for="customer-first-name">
+                    <input type="text" name="customer-first-name" placeholder="First Name*" required>
+                </label>
+                <label for="customer-last-name">
+                    <input type="text" name="customer-last-name" placeholder="Last Name*" required>
+                </label>
+                <label>
+                    <input type="email" name="customer-email" placeholder="Email*" required>
+                </label>
+                <label>
+                    <input type="text" name="customer-phone" placeholder="Phone*">
+                </label>
+                <div class="cart-products">
+                    <h3>Select Products</h3>
+                    <div class="cart-product">
+                        <label for="cart-image">Select Photo:
+                            <select name="cart-image" required>
+                                <option value="">Select Photo</option>
+                            </select>
+                        </label>
+                        <label for="cart-size">Select Size:
+                            <select name="cart-size" required>
+                                <option value="">Select Size</option>
+                            </select>
+                        </label>
+                        <label for="cart-layout">Select Layout:
+                            <select name="cart-layout" required>
+                                <option value="">Select Layout</option>
+                            </select>
+                        </label>
+                        <label for="cart-price">Product Price:
+                            <input type="text" name="cart-price" disabled>
+                        </label>
+                    </div>
+                </div>
+                <button class="add-new-item btn" role="button">Add New Product</button>
 
-            </ul>
-
-            <form>
-                <label>
-                    <input type="text" placeholder="Name*">
-                </label>
-                <label>
-                    <input type="text" placeholder="Email*">
-                </label>
-                <label>
-                    <input type="text" placeholder="Phone*">
-                </label>
-                <textarea placeholder="Message*"></textarea>
+                <textarea name="customer-message" placeholder="Message*"></textarea>
                 <input type="submit" value="Send">
             </form>
 
@@ -69,7 +88,7 @@
 
         <footer>
             <div class="copyright">
-                <p>Haws Photography. Website by <a href="https://katiewrennhansen.com" target="_blank">katiewrennhansen</a></p>
+                <p>© 2019. Andrew Haws Landscape Photography. All Rights Reserved Website by <a href="https://katiewrennhansen.com" target="_blank">katiewrennhansen</a></p>
             </div>
         </footer>
         <script src="image-data.js"></script>

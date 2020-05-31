@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: rgb(244, 241, 245);
+    background-color: $background-color;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -36,6 +36,7 @@ form {
     }
     input[type="text"],
     input[type="submit"],
+    input[type="email"],
     textarea {
         padding: 5px;
         border: 2px solid $main-color;
@@ -57,6 +58,20 @@ form {
             transition: all 300ms linear;
 
         }
+    }
+    select {
+        padding: 5px;
+        width: 100px;
+        appearance: none;
+        border: 1px solid $main-color;
+        color: $main-color;
+        border-radius: 0px;
+        margin-bottom: 10px;
+        background-image: url('http://cdn.onlinewebfonts.com/svg/img_295694.svg');
+        background-repeat: no-repeat;
+        background-position: 90% 50%;
+        background-size: 10px;
+        background-color: white;
     }
 }
 
@@ -148,34 +163,53 @@ form {
         width: 40%;
         margin: 30px auto;
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         .email,
         .instagram {
             text-align: center;
         }
         a {
             color: $main-color;
+            transition: all 300ms linear;
+            &:hover {
+                i, 
+                .icon-title {
+                    color: $hover-color;
+                    transition: all 300ms linear;
+                }
+            }
             i {
                 font-size: 25px;
                 color: $main-color;
             }
-            span {
+            .icon-title {
                 font-size: 12px;
+                display: none;
             }
+        }
+    }
+    h3 {
+        padding: 10px 0;
+    }
+    form {
+        input[type="submit"] {
+            background-color: $main-color;
+            color: #fff;
+            width: 100px;
+            height: 50px;
         }
     }
 }
 
 footer {
-    background: $main-color;
-    color: rgb(244, 241, 245);
+    margin-top: 50px;
+    border-top: 1px solid $main-color;
+    color: $main-color;
     padding: 30px;
     text-align: center;
+    font-size: 12px;
     a {
-        color: rgb(244, 241, 245);
-    }
-    .about {
-        font-size: 300px;
+        color: $hover-color;
     }
 }
 
@@ -220,6 +254,13 @@ footer {
             width: 50%;
             margin: 0 auto;
         }
+        .icons {
+            a {  
+                .icon-title {
+                    display: block;
+                }
+            }
+        }
     }
 }
 
@@ -262,7 +303,7 @@ footer {
         width: 80%;
         left: 50%;
         margin-left: -40%;
-        top: 20%;
+        top: 10%;
         margin-top: -50px;
         z-index: 300;
         padding: 20px;
@@ -286,31 +327,16 @@ footer {
                     label {
                         display: block;
                     }
-                    select {
-                        padding: 5px;
-                        width: 100px;
-                        appearance: none;
-                        border: 1px solid $main-color;
-                        color: $main-color;
-                        border-radius: 0px;
-                        margin-bottom: 10px;
-                        background-image: url('http://cdn.onlinewebfonts.com/svg/img_295694.svg');
-                        background-repeat: no-repeat;
-                        background-position: 90% 50%;
-                        background-size: 10px;
-                        background-color: white;
-                    }
-                    .add-to-cart-btn {
-                        border: 1px solid $main-color;
-                        color: $main-color;
-                        &:hover {
-                            cursor: pointer;
-                            background: $main-color;
-                            color: white;
-                        }
-                    }          
                 }
-                
+                .add-to-cart-btn {
+                    border: 1px solid $main-color;
+                    color: $main-color;
+                    &:hover {
+                        cursor: pointer;
+                        background: $main-color;
+                        color: white;
+                    }
+                }          
             }
         }
     }

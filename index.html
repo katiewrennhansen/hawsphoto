@@ -9,6 +9,8 @@
         <title>Andrew Haws Photography</title>
         <link rel="shortcut icon" type="image/x-icon" href="https://static.wixstatic.com/media/bea260_f82690ae87054c809a7406e0fd85a7fb~mv2.png/v1/fill/w_132,h_90,al_c,q_85,usm_0.66_1.00_0.01/Andrew-Haws-Logo-2.webp">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Playfair+Display&display=swap" rel="stylesheet">       
+        <link rel="preload" as="image" href="dist/images/illusion.jpg">
+        <link rel="prefetch" href="dist/shop.html">
         <link rel="stylesheet" href="dist/css/home.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     </head>
@@ -29,11 +31,6 @@
                     </li>
                     <li>
                         <a href="dist/shop.html">Shop
-                            <div class="underline"></div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="dist/cart.html">Cart
                             <div class="underline"></div>
                         </a>
                     </li>
@@ -85,44 +82,39 @@
             <h2>Contact</h2>
             <div class="icons">
                     <div class="instagram">
-                        <a href="https://www.instagram.com/picturethis_haws/" aria-label="Visit the Andrew Haws Instagram page" target="_blank">
+                        <a href="https://www.instagram.com/haws_photography" aria-label="Visit the Andrew Haws Instagram page" target="_blank">
                             <i class="fab fa-instagram"></i>
                             <br>
-                            <span>@picturethis_haws</span>
+                            <span class="icon-title">@haws_photography</span>
                         </a>
                     </div>
                     <div class="email">
                         <a href="mailto:ahawsphotography@yahoo.com" aria-label="Email Andrew Haws">
                             <i class="fas fa-envelope icon-link"></i>
                             <br>
-                            <span>ahawsphotography@yahoo.com</span>
+                            <span class="icon-title">ahawsphotography@yahoo.com</span>
                         </a>
                     </div>
-                    <!-- <div class="linkedin">
-                        <a href="" aria-label="Visit LinkedIn page" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="facebook">
-                        <a href="" aria-label="Visit the Facebook page" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    </div> -->
                 </div>
-            <form>
+            <form class="contact-form" name="contact-form">
+                <h3>Send me a Message!</h3>
                 <label>
-                    <input type="text" placeholder="Name*">
+                    <input name="name" type="text" placeholder="Name*">
                 </label>
                 <label>
-                    <input type="text" placeholder="Email*">
+                    <input name="email" type="email" placeholder="Email*">
                 </label>
                 <label>
-                    <input type="text" placeholder="Phone*">
+                    <input name="phone" type="text" placeholder="Phone*">
                 </label>
-                <textarea placeholder="Message*"></textarea>
+                <textarea name="message" placeholder="Message*"></textarea>
                 <input type="submit" value="Send">
             </form>
         </section>
 
         <footer>
             <div class="copyright">
-                <p>Haws Photography. Website by <a href="https://katiewrennhansen.com" target="_blank">katiewrennhansen</a></p>
+                <p>© 2019. Andrew Haws Landscape Photography. All Rights Reserved Website by <a href="https://katiewrennhansen.com" target="_blank">katiewrennhansen</a></p>
             </div>
         </footer>
     </body>

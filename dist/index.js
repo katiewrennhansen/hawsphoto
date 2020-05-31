@@ -58,16 +58,16 @@ quickviewCloseIcon.addEventListener('click', () => {
 })
 
 
-quickviewForm.addEventListener('submit', (e) => {
-    const size = document.getElementById('sizing-options')
-    const view = document.getElementById('view-options')
-    e.preventDefault();
-    let selectedItem = {
-        image: activeImage.name,
-        price: activeImage.price,
-        size: size.value,
-        view: view.value
-    }
-    cart.push(selectedItem)
-    window.localStorage.setItem('cart', JSON.stringify(cart));
-})
+// quickviewForm.addEventListener('submit', (e) => {
+    // const size = document.getElementById('sizing-options')
+    // const view = document.getElementById('view-options')
+    // e.preventDefault();
+    // let selectedItem = {
+    //     image: activeImage.name,
+    //     price: activeImage.price,
+    //     size: size.value,
+    //     view: view.value
+    // }
+    // cart.push(selectedItem)
+    // window.localStorage.setItem('cart', JSON.stringify(cart));
+// })
