@@ -11,7 +11,8 @@
 
 body {
     background-color: $background-color;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
 }
 
 h2 {
@@ -20,6 +21,11 @@ h2 {
     border-bottom: 2px solid $main-color;
     margin: 20px 0;
     padding-bottom: 6px;
+    font-weight: 200;
+}
+
+h3 {
+    font-weight: 300;
 }
 
 a {
@@ -39,11 +45,11 @@ form {
     input[type="email"],
     textarea {
         padding: 5px;
-        border: 2px solid $main-color;
+        border: 1px solid $main-color;
         width: 100%;
         height: 35px;
         margin: 5px 0;
-        font-family: 'Open Sans', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 14px;
     }
     textarea {
@@ -76,7 +82,7 @@ form {
 }
 
 .btn {
-    padding: 10px 30px;
+    padding: 8px 30px;
     text-transform: uppercase;
     transition: all 300ms linear;
     &:hover {
@@ -109,24 +115,34 @@ form {
         color: white;
         border: 1px solid white;
         width: 90%;
-        margin: 50px auto;
+        margin: 100px auto 50px;
         font-weight: 300;
         text-transform: uppercase;
+        padding: 10px;
         h1 {
-            font-size: 30px;
+            font-size: 32px;
             letter-spacing: 0.1rem;
             font-family: 'Playfair Display', serif;
         }
         .caption {
+            margin: 5px 0;
+            font-size: 14px;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-weight: 200;
             .name-bar {
                 width: 10px;
                 height: 1px;
                 margin: 0 5px;
                 background-color: white;
             }
+        }
+        .logo {
+            background: rgba(133, 133, 133, 0.6);
+            border: 5px solid rgb(206, 206, 206);
+            width: 60px;
+            margin: 10px 0 0;
         }
     }
     .shop-btn {
@@ -140,7 +156,7 @@ form {
 }
 
 .about {
-    padding: 20px;
+    padding: 30px 20px 100px;
     img {
         width: 100%;
         margin: 0 auto;
@@ -151,8 +167,15 @@ form {
     }
     .about-content {
         p {
+            font-size: 14px;
             line-height: 1.5;
-            margin: 10px 0;
+            margin: 12px 0;
+        }
+    }
+    .signature {
+        margin-top: 20px;
+        p {
+            margin: 0;
         }
     }
 }
@@ -188,15 +211,26 @@ form {
             }
         }
     }
-    h3 {
+    .message-title {
         padding: 10px 0;
+        text-align: left;
+        font-size: 15px;
     }
     form {
+        text-align: center;
         input[type="submit"] {
             background-color: $main-color;
+            border: 1px solid $main-color;
             color: #fff;
             width: 100px;
             height: 50px;
+            text-transform: uppercase;
+            font-size: 20px;
+            transform: translateY(-40px);
+            &:hover {
+                background-color: #fff;
+                color: $main-color;
+            }
         }
     }
 }
@@ -242,7 +276,7 @@ footer {
                 p {
                     margin: 0 0 20px 0;
                 }
-                .signature {
+                .content-signature {
                     display: none;
                 }
             }
@@ -372,7 +406,7 @@ footer {
                     border: none;
                     background: rgba(255, 255, 255, 0.6);
                     color: $main-color;
-                    font-family: 'Open Sans', sans-serif;
+                    font-family: 'Poppins', sans-serif;
                     font-size: 15px;
                     transition: all 300ms linear;
                 }
