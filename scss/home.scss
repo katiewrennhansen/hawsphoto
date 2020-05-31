@@ -82,7 +82,7 @@ form {
 }
 
 .btn {
-    padding: 8px 30px;
+    padding: 8px 40px;
     text-transform: uppercase;
     transition: all 300ms linear;
     &:hover {
@@ -245,16 +245,38 @@ footer {
     a {
         color: $hover-color;
     }
+    .instagram {
+        margin: 20px 0 0;
+        a {
+            transition: all 300ms linear;
+            color: $main-color;
+            font-size: 16px;
+            &:hover {
+                transition: all 300ms linear;
+                color: $hover-color;
+            }
+        }
+    }
 }
 
 
 @media (min-width: 767px){
+    h2 {
+        margin-bottom: 30px;
+    }
     .home {
         .homepage-container {
-            width: 60%;
+            width: 65%;
             margin: 100px auto 50px;
+            padding: 15px;
             h1 {
-                font-size: 50px;
+                font-size: 60px;
+            }
+            .caption {
+                font-size: 15px;
+            }
+            .logo {
+                width: 70px;
             }
         }
     } 
@@ -285,10 +307,11 @@ footer {
     .contact {
         padding: 60px;
         form {
-            width: 50%;
+            width: 60%;
             margin: 0 auto;
         }
         .icons {
+            width: 60%;
             a {  
                 .icon-title {
                     display: block;
@@ -296,17 +319,42 @@ footer {
             }
         }
     }
+    footer {
+        padding: 30px 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .instagram {
+            margin: 0;
+        }
+    }
 }
 
 
 
 @media (min-width: 1000px){
-    header {
+    .home {
         .homepage-container {
-            width: 60%;
+            width: 50%;
+            padding: 20px;
             h1 {
                 font-size: 70px;
             }
+            .caption {
+                margin: 15px 0;
+            }
+            .logo {
+                width: 80px;
+            }
+        }
+        .shop-btn {
+            padding: 8px 50px;
+            font-size: 18px;
+        }
+    }
+    .contact {
+        .icons {
+            justify-content: space-around;
         }
     }
 }
