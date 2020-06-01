@@ -18,7 +18,6 @@ function createSelectItem(image){
     cartImage.appendChild(imageOption)
 }
 
-
 function populateSize(image){
     const sizes = image.sizes;
     if(image.name != selectedImage){
@@ -63,42 +62,101 @@ cartImage.addEventListener('change', function(e){
     cartPrice.setAttribute('value', selectedImageData.price[0]);
 });
 
-addNewItemBtn.addEventListener('click', (e) => {
-    e.preventDefault();
-    const productWrapper = document.createElement('div');
-    productWrapper.classList.add('cart-product');
-    productWrapper.setAttribute('id', `cart-product-${productId}`);
-    productId ++;
 
-    const imageLabel = document.createElement('label');
-    imageLabel.textContent = 'Select Photo: ';
-    const imageSelect = document.createElement('select')
-    imageSelect.setAttribute('name', 'cart-image');
-    imageLabel.appendChild(imageSelect);
 
-    const sizeLabel = document.createElement('label');
-    sizeLabel.textContent = 'Select Size: ';
-    const sizeSelect = document.createElement('select')
-    sizeSelect.setAttribute('name', 'cart-size');
-    sizeLabel.appendChild(sizeSelect);
 
-    const layoutLabel = document.createElement('label');
-    layoutLabel.textContent = 'Select Layout: ';
-    const layoutSelect = document.createElement('select')
-    layoutSelect.setAttribute('name', 'cart-layout');
-    layoutLabel.appendChild(layoutSelect);
 
-    const priceLabel = document.createElement('label');
-    priceLabel.textContent = 'Calculated Price: ';
-    const priceSelect = document.createElement('input')
-    priceSelect.setAttribute('type', 'text');
-    priceSelect.setAttribute('name', 'cart-price');
-    priceLabel.appendChild(priceSelect);
 
-    productWrapper.appendChild(imageLabel);
-    productWrapper.appendChild(sizeLabel);
-    productWrapper.appendChild(layoutLabel);
-    productWrapper.appendChild(priceLabel);
 
-    cartProducts.appendChild(productWrapper);
-});
+
+
+
+//Yes it's a mess but were working on it
+
+
+
+
+// function createNewSelectItem(image, select){
+//     const imageOption = document.createElement('option');
+//     imageOption.setAttribute('name', image.name);
+//     imageOption.setAttribute('value', image.name);
+//     imageOption.textContent = `${image.name}`
+//     select.appendChild(imageOption)
+// }
+
+// function populateNewSizes(image, select){
+//     const sizes = image.sizes;
+//     if(image.name != selectedImage){
+//         removeOptions(cartSize);
+//     }
+//     sizes.forEach(size => {
+//         const sizeOption = document.createElement('option');
+//         sizeOption.setAttribute('name', size);
+//         sizeOption.setAttribute('value', size);
+//         sizeOption.textContent = `${size}`
+//         select.appendChild(sizeOption)
+//     })
+// }
+
+// function populateNewLayout(image, select){
+//     const sizes = image.layout;
+//     if(image.name != selectedImage){
+//         removeOptions(cartLayout);
+//     }
+//     sizes.forEach(layout => {
+//         const layoutOption = document.createElement('option');
+//         layoutOption.setAttribute('name', layout);
+//         layoutOption.setAttribute('value', layout);
+//         layoutOption.textContent = `${layout}`
+//         select.appendChild(layoutOption)
+//     })
+// }
+
+// addNewItemBtn.addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const productWrapper = document.createElement('div');
+//     productWrapper.classList.add('cart-product');
+//     productWrapper.setAttribute('id', `cart-product-${productId}`);
+//     productId ++;
+
+//     const imageLabel = document.createElement('label');
+//     imageLabel.textContent = 'Select Photo: ';
+//     const imageSelect = document.createElement('select')
+//     imageSelect.setAttribute('name', 'cart-image');
+//     images.forEach(image => createNewSelectItem(image, imageSelect));
+//     imageLabel.appendChild(imageSelect);
+
+//     const sizeLabel = document.createElement('label');
+//     sizeLabel.textContent = 'Select Size: ';
+//     const sizeSelect = document.createElement('select');
+//     sizeSelect.setAttribute('name', 'cart-size');
+//     sizeLabel.appendChild(sizeSelect);
+
+//     const layoutLabel = document.createElement('label');
+//     layoutLabel.textContent = 'Select Layout: ';
+//     const layoutSelect = document.createElement('select')
+//     layoutSelect.setAttribute('name', 'cart-layout');
+//     layoutLabel.appendChild(layoutSelect);
+
+//     const priceLabel = document.createElement('label');
+//     priceLabel.textContent = 'Calculated Price: ';
+//     const priceSelect = document.createElement('input')
+//     priceSelect.setAttribute('type', 'text');
+//     priceSelect.setAttribute('name', 'cart-price');
+//     priceLabel.appendChild(priceSelect);
+
+
+//     imageSelect.addEventListener('change', function(e){
+//         let selectedImageData = images.find(image => e.target.value === image.name);
+//         populateNewSizes(selectedImageData, sizeSelect);
+//         populateNewLayout(selectedImageData, layoutSelect);
+//         priceSelect.setAttribute('value', selectedImageData.price[0]);
+//     });
+
+//     productWrapper.appendChild(imageLabel);
+//     productWrapper.appendChild(sizeLabel);
+//     productWrapper.appendChild(layoutLabel);
+//     productWrapper.appendChild(priceLabel);
+
+//     cartProducts.appendChild(productWrapper);
+// });
