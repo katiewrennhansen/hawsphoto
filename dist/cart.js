@@ -1,8 +1,8 @@
 const checkoutForm = document.querySelector('.checkout form');
-const cartImage = document.querySelector('select[name="cart-image"]');
-const cartSize = document.querySelector('select[name="cart-size"]');
-const cartLayout = document.querySelector('select[name="cart-layout"]');
-const cartPrice = document.querySelector('input[name="cart-price"]');
+const cartImage = document.querySelector('select[id="cart-image"]');
+const cartSize = document.querySelector('select[id="cart-size"]');
+const cartLayout = document.querySelector('select[id="cart-layout"]');
+const cartPrice = document.querySelector('input[id="cart-price"]');
 const cartProducts = document.querySelector('.cart-products');
 const addNewItemBtn = document.querySelector('.add-new-item-btn');
 let selectedImage
@@ -55,10 +55,8 @@ function removeOptions(selectOption){
 
 cartImage.addEventListener('change', function(e){
     let selectedImageData = images.find(image => e.target.value === image.name);
-    console.log(selectedImageData)
     populateSize(selectedImageData);
     populateLayout(selectedImageData);
-    console.log(cartPrice)
     cartPrice.setAttribute('value', selectedImageData.price[0]);
 });
 

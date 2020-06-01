@@ -47,38 +47,38 @@
                 <div class="checkout-block checkout-contact">
                     <h3>Enter your contact information: </h3>
                     <label for="customer-first-name">
-                        <input type="text" name="customer-first-name" placeholder="First Name*" required>
+                        <input type="text" id="customer-first-name" name="First Name" placeholder="First Name*" required>
                     </label>
                     <label for="customer-last-name">
-                        <input type="text" name="customer-last-name" placeholder="Last Name*" required>
+                        <input type="text" id="customer-last-name" name="Last Name" placeholder="Last Name*" required>
                     </label>
                     <label>
-                        <input type="email" name="customer-email" placeholder="Email*" required>
+                        <input type="email" id="customer-email" name="Email" placeholder="Email*" required>
                     </label>
                     <label>
-                        <input type="text" name="customer-phone" placeholder="Phone*">
+                        <input type="text" id="customer-phone" name="Phone" placeholder="Phone*">
                     </label>
                 </div>
                 <div class="checkout-block cart-products">
                     <h3>Select Desired Photo: </h3>
                     <div class="cart-product" id="cart-product-0">
                         <label for="cart-image">Select Photo:
-                            <select name="cart-image" required>
+                            <select id="cart-image" name="Image Name" required>
                                 <option value="">Select Photo</option>
                             </select>
                         </label>
                         <label for="cart-size">Select Size:
-                            <select name="cart-size" required>
+                            <select id="cart-size" name="Image Size" required>
                                 <option value="">Select Size</option>
                             </select>
                         </label>
                         <label for="cart-layout">Select Layout:
-                            <select name="cart-layout" required>
+                            <select id="cart-layout" name="Image Layout" required>
                                 <option value="">Select Layout</option>
                             </select>
                         </label>
                         <label for="cart-price">Calculated Price:
-                            <input type="text" name="cart-price" disabled>
+                            <input type="text" id="cart-price" name="Calculated Price" disabled>
                         </label>
                     </div>
                 </div>
@@ -87,7 +87,7 @@
 
                 <div class="checkout-block checkout-message">
                     <h3>Enter a message: </h3>
-                    <textarea name="customer-message" placeholder="Message*" required></textarea>
+                    <textarea id="customer-message" name="Message" placeholder="Message*" required></textarea>
                 </div>
                 <input type="submit" value="Send">
             </form>
