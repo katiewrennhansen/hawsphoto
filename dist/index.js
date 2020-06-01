@@ -12,6 +12,7 @@ let cart = [];
 
 images.forEach(image => createProductItem(image));
 
+
 function createProductItem(image){
     //create product grid item
     const container = document.createElement('div');
@@ -27,7 +28,6 @@ function createProductItem(image){
     productImage.setAttribute('alt', image.name);
     productImage.classList.add('shop-product-image');
 
-
     //create quickview button
     const quickview = document.createElement('button');
     quickview.textContent = "Quickview";
@@ -40,8 +40,13 @@ function createProductItem(image){
         quickviewPrice.textContent = `$${image.price[0]} - $${image.price[1]} `;
         quickviewDescription.textContent = `${image.description}`;
         quickviewImage.setAttribute('src', image.imagePath);
-    })
 
+        const buttons = document.querySelectorAll('.quickview');
+        buttons.forEach(button => {
+            button.style.display = 'none';
+        });
+    });
+   
     //append everything to everyhthing
     productImageContainer.appendChild(productImage);
     productImageContainer.appendChild(quickview);
@@ -52,4 +57,9 @@ function createProductItem(image){
 quickviewCloseIcon.addEventListener('click', () => {
     document.querySelector('body').classList.remove('modal-open')
     quickviewModal.style.display = 'none';
+
+    const buttons = document.querySelectorAll('.quickview');
+    buttons.forEach(button => {
+        button.style.display = 'block';
+    });
 })

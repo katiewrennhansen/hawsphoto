@@ -4,8 +4,9 @@ const cartSize = document.querySelector('select[name="cart-size"]');
 const cartLayout = document.querySelector('select[name="cart-layout"]');
 const cartPrice = document.querySelector('input[name="cart-price"]');
 const cartProducts = document.querySelector('.cart-products');
-const addNewItemBtn = document.querySelector('.add-new-item');
-let selectedImage;
+const addNewItemBtn = document.querySelector('.add-new-item-btn');
+let selectedImage
+let productId = 1;
 
 images.forEach(image => createSelectItem(image));
 
@@ -66,5 +67,38 @@ addNewItemBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const productWrapper = document.createElement('div');
     productWrapper.classList.add('cart-product');
+    productWrapper.setAttribute('id', `cart-product-${productId}`);
+    productId ++;
+
+    const imageLabel = document.createElement('label');
+    imageLabel.textContent = 'Select Photo: ';
+    const imageSelect = document.createElement('select')
+    imageSelect.setAttribute('name', 'cart-image');
+    imageLabel.appendChild(imageSelect);
+
+    const sizeLabel = document.createElement('label');
+    sizeLabel.textContent = 'Select Size: ';
+    const sizeSelect = document.createElement('select')
+    sizeSelect.setAttribute('name', 'cart-size');
+    sizeLabel.appendChild(sizeSelect);
+
+    const layoutLabel = document.createElement('label');
+    layoutLabel.textContent = 'Select Layout: ';
+    const layoutSelect = document.createElement('select')
+    layoutSelect.setAttribute('name', 'cart-layout');
+    layoutLabel.appendChild(layoutSelect);
+
+    const priceLabel = document.createElement('label');
+    priceLabel.textContent = 'Calculated Price: ';
+    const priceSelect = document.createElement('input')
+    priceSelect.setAttribute('type', 'text');
+    priceSelect.setAttribute('name', 'cart-price');
+    priceLabel.appendChild(priceSelect);
+
+    productWrapper.appendChild(imageLabel);
+    productWrapper.appendChild(sizeLabel);
+    productWrapper.appendChild(layoutLabel);
+    productWrapper.appendChild(priceLabel);
+
     cartProducts.appendChild(productWrapper);
 });
