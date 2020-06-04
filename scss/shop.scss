@@ -1,4 +1,4 @@
-@import '_variables';
+// SHOP PAGE STYLES
 
 .shop {
     nav {
@@ -14,5 +14,208 @@
                 }
             }
         } 
+    }
+}
+.quickview-modal {
+    display: none;
+}
+
+.modal-open {
+    position: relative;
+    .modal-overlay {
+        height: 100vh;
+        width: 100vw;
+        opacity: 0.4;
+        position: fixed;
+        background-color: $main-color;
+    }
+    .quickview-modal {
+        background: white;
+        position: fixed;
+        height: auto;
+        width: 90%;
+        left: 50%;
+        margin-left: -45%;
+        top: 10%;
+        margin-top: -50px;
+        z-index: 300;
+        padding: 20px;
+        box-shadow: 3px 3px 10px rgba(31, 31, 31, 0.247);
+        .quickview-close-icon {
+            position: absolute;
+            right: 20px;
+            z-index: 350;
+            transition: all 300ms linear;
+            &:hover {
+                cursor: pointer;
+                color: #04041c98;
+                transition: all 300ms linear;
+            }
+        }
+        .modal-flex-container {
+            .quickview-image {
+                display: none;
+            }
+            .modal-content {
+                form {
+                    margin: 20px 0;
+                    label {
+                        font-size: 14px;
+                    }
+                }
+                .shipping-policy {
+                    font-size: 14px;
+                    margin: 30px 0 0 0;
+                    h4 {
+                        font-size: 15px;
+                        margin: 0 0 6px;
+                    }
+                }         
+            }
+        }
+    }
+    .products {
+        .product-container {
+            .product-item {
+                .product-image-container {
+                    img {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.add-to-cart-btn {
+    border: 1px solid $main-color;
+    background-color: $main-color;
+    color: white;
+    &:hover {
+        cursor: pointer;
+        background: white;
+        color: $main-color;
+    }
+} 
+
+.products {
+    padding: 20px;
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        .product-item {
+            width: 100%;
+            .modal {
+                display: none;
+            }
+            .product-image-container {
+                position: relative;
+                margin: 10px;
+                overflow:hidden;
+                border: 2px solid $main-color;
+                img {
+                    width: 100%;
+                    margin-bottom: -7px;
+                }
+                .quickview {
+                    text-transform: uppercase;
+                    transform: translateY(50px);
+                    opacity: 0;
+                    position: absolute;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 7px;
+                    width: 100%;
+                    height: 50px;
+                    border: none;
+                    background: rgba(255, 255, 255, 0.6);
+                    color: $main-color;
+                    font-family: 'Poppins', sans-serif;
+                    font-size: 15px;
+                    transition: all 200ms linear;
+                }
+                &:hover {
+                    .quickview {
+                        transform: translateY(7px);
+                        opacity: 1;
+                        transition: all 200ms linear;
+                        &:hover {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        } 
+    }
+    .product-contact {
+        padding-top: 60px;
+        text-align: center;
+    }
+}
+
+
+@media (min-width: 767px){
+    .modal-open {
+        .quickview-modal {
+            .quickview-close-icon {
+                top: 15px;
+            }
+            .modal-flex-container {
+                display: flex;
+                .quickview-image-container {
+                    width: 100%;
+                    overflow: hidden;
+                    .quickview-image {
+                        width: 100%;
+                        display: block;
+                        transition: all 300ms linear;
+                    }
+                    &:hover {
+                        .quickview-image {
+                            transform: scale(1.5);
+                            transition: all 300ms linear;
+                        }    
+                    }
+                }
+                .modal-content {
+                    padding: 0 20px;
+                    form {
+                        margin: 20px 0;
+                    } 
+                }
+            }
+        }
+    }    
+    .products {
+        padding: 60px;
+        .product-container {
+            .product-item {
+                width: 50%;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 1000px){
+    .modal-open {
+        .quickview-modal {
+            width: 70%;
+            left: 50%;
+            margin-left: -35%;
+            padding: 25px;
+            .modal-flex-container {
+                .quickview-image {
+                    width: 45%;
+                }
+            }
+        }
+    }    
+    .products {
+        .product-container {
+            .product-item {
+                width: 33.33%;
+            }
+        }
     }
 }

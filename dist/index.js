@@ -7,11 +7,31 @@ const quickviewImage = quickviewModal.querySelector('.quickview-image');
 const quickviewCloseIcon = quickviewModal.querySelector('.quickview-close-icon');
 const quickviewForm = quickviewModal.querySelector('form.modal-form');
 
-let activeImage = {};
-let cart = [];
-
 images.forEach(image => createProductItem(image));
 
+//allow quickview button hover depending on if modal is open/closed
+function displayButtons(display){
+    const buttons = document.querySelectorAll('.quickview');
+    buttons.forEach(button => {
+        button.style.display = display;
+    });
+}
+
+function closeModal(){
+    document.querySelector('body').classList.remove('modal-open');
+    quickviewModal.style.display = 'none';
+    displayButtons('block');
+}
+
+function openModal(image){
+    document.querySelector('body').classList.add('modal-open');
+    quickviewModal.style.display = 'block';
+    quickviewTitle.textContent = `${image.name}`;
+    quickviewPrice.textContent = `$${image.price[0]} - $${image.price[1]} `;
+    quickviewDescription.textContent = `${image.description}`;
+    quickviewImage.setAttribute('src', image.imagePath);
+    displayButtons('none');
+}
 
 function createProductItem(image){
     //create product grid item
@@ -32,20 +52,9 @@ function createProductItem(image){
     const quickview = document.createElement('button');
     quickview.textContent = "Quickview";
     quickview.classList.add('quickview');
-    quickview.addEventListener('click', () => {
-        document.querySelector('body').classList.add('modal-open');
-        activeImage = image;
-        quickviewModal.style.display = 'block';
-        quickviewTitle.textContent = `${image.name}`;
-        quickviewPrice.textContent = `$${image.price[0]} - $${image.price[1]} `;
-        quickviewDescription.textContent = `${image.description}`;
-        quickviewImage.setAttribute('src', image.imagePath);
-
-        const buttons = document.querySelectorAll('.quickview');
-        buttons.forEach(button => {
-            button.style.display = 'none';
-        });
-    });
+    
+    //event listener to open modal on click
+    quickview.addEventListener('click', () => openModal(image));
    
     //append everything to everyhthing
     productImageContainer.appendChild(productImage);
@@ -54,12 +63,7 @@ function createProductItem(image){
     productGrid.appendChild(container);
 }
 
-quickviewCloseIcon.addEventListener('click', () => {
-    document.querySelector('body').classList.remove('modal-open')
-    quickviewModal.style.display = 'none';
+//event listener to close modal on click
+quickviewCloseIcon.addEventListener('click', closeModal);
 
-    const buttons = document.querySelectorAll('.quickview');
-    buttons.forEach(button => {
-        button.style.display = 'block';
-    });
-})
+
