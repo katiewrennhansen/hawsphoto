@@ -547,18 +547,6 @@ footer .instagram a:hover {
   font-size: 14px;
 }
 
-.modal-open .quickview-modal .modal-flex-container .modal-content .add-to-cart-btn {
-  border: 1px solid #04041c;
-  background-color: #04041c;
-  color: white;
-}
-
-.modal-open .quickview-modal .modal-flex-container .modal-content .add-to-cart-btn:hover {
-  cursor: pointer;
-  background: white;
-  color: #04041c;
-}
-
 .modal-open .quickview-modal .modal-flex-container .modal-content .shipping-policy {
   font-size: 14px;
   margin: 30px 0 0 0;
@@ -571,6 +559,18 @@ footer .instagram a:hover {
 
 .modal-open .products .product-container .product-item .product-image-container img {
   opacity: 0.7;
+}
+
+.add-to-cart-btn {
+  border: 1px solid #04041c;
+  background-color: #04041c;
+  color: white;
+}
+
+.add-to-cart-btn:hover {
+  cursor: pointer;
+  background: white;
+  color: #04041c;
 }
 
 .products {
@@ -635,6 +635,11 @@ footer .instagram a:hover {
 
 .products .product-container .product-item .product-image-container:hover .quickview:hover {
   cursor: pointer;
+}
+
+.products .product-contact {
+  padding-top: 60px;
+  text-align: center;
 }
 
 @media (min-width: 767px) {
