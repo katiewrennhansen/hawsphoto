@@ -507,9 +507,10 @@ footer {
                 position: relative;
                 margin: 10px;
                 overflow:hidden;
+                border: 2px solid $main-color;
                 img {
                     width: 100%;
-                    border: 2px solid $main-color;
+                    margin-bottom: -7px;
                 }
                 .quickview {
                     text-transform: uppercase;
@@ -530,7 +531,7 @@ footer {
                 }
                 &:hover {
                     .quickview {
-                        transform: translateY(0px);
+                        transform: translateY(7px);
                         opacity: 1;
                         transition: all 200ms linear;
                         &:hover {
