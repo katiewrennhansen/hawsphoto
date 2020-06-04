@@ -128,7 +128,7 @@ const images = [
     {
         id: 15,
         name: 'Untitled 2',
-        imagePath: 'images/untitled_2.jpeg',
+        imagePath: 'images/untitled_2.jpg',
         description: 'testing the json-like data structure again',
         price: ['101', '200'],
         sizes: ['13x16'],
