@@ -31,6 +31,8 @@ function openModal(image){
     quickviewDescription.textContent = `${image.description}`;
     quickviewImage.setAttribute('src', image.imagePath);
     displayButtons('none');
+    //jump focus to first select
+    document.querySelector('select[name="sizing-options"]').focus()
 }
 
 function createProductItem(image){

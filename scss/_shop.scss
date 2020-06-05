@@ -144,6 +144,11 @@
                         }
                     }
                 }
+                .quickview:focus {
+                    transform: translateY(7px);
+                    opacity: 1;
+                    transition: all 200ms linear;
+                }
             }
         } 
     }

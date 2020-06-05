@@ -154,6 +154,14 @@
   cursor: pointer;
 }
 
+.products .product-container .product-item .product-image-container .quickview:focus {
+  -webkit-transform: translateY(7px);
+          transform: translateY(7px);
+  opacity: 1;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
 .products .product-contact {
   padding-top: 60px;
   text-align: center;
