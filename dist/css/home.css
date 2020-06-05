@@ -302,6 +302,10 @@ header nav ul li a:hover .underline {
           transform: translateY(-70px);
 }
 
+.checkout form textarea {
+  height: 150px;
+}
+
 @media (min-width: 767px) {
   .checkout {
     padding: 60px;
