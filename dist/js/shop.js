@@ -30,9 +30,12 @@ function openModal(image){
     quickviewPrice.textContent = `$${image.price[0]} - $${image.price[1]} `;
     quickviewDescription.textContent = `${image.description}`;
     quickviewImage.setAttribute('src', image.imagePath);
+    quickviewImage.setAttribute('alt', image.name);
     displayButtons('none');
-    //jump focus to first select
-    document.querySelector('select[name="sizing-options"]').focus()
+    //jump focus to first select on desktop
+    if(window.innerWidth > 450){
+        document.querySelector('select[name="sizing-options"]').focus()
+    }
 }
 
 function createProductItem(image){
