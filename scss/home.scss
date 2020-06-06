@@ -122,20 +122,20 @@ form {
 
 .home {
     nav {
+        padding: 40px 0 60px;
+        background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
         ul {
             li {
                 a {
                     color: white;
-                    &:hover {
-                        .underline {
-                            background-color: white;
-                        }
+                    &:before {
+                        background-color: white;
                     }
                 }
             }
         } 
     }
-    background-image: url('../images/illusion_cover.jpg');
+    background-image: url('../images/background.jpg');
     text-align: center;
     background-position: center;
     background-repeat: no-repeat;
@@ -178,6 +178,7 @@ form {
     .shop-btn {
         border: 1px solid white;
         color: white;
+        background: rgba(48, 48, 48, 0.15);
         &:hover {
             background: white;
             color: rgb(23, 22, 22);
