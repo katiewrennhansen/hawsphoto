@@ -41,7 +41,11 @@
                     <p>Landscape Photographer</p>
                     <span class="name-bar"></span>
                 </div>
-                <img class="logo" alt="logo" src="./dist/images/logo.png">
+                <picture>
+                    <source srcset="./dist/images/logo.webp" type="image/webp">
+                    <source srcset="./dist/images/logo.png">
+                    <img class="logo" alt="logo"  src="./dist/images/logo.webp">
+                 </picture>
             </div>
             <a class="shop-btn btn" href="dist/shop.html" role="button">Shop</a>
         </header>
