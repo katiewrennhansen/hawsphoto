@@ -27,8 +27,8 @@ function openModal(image){
     document.querySelector('body').classList.add('modal-open');
     quickviewModal.style.display = 'block';
     quickviewTitle.textContent = `${image.name}`;
-    quickviewPrice.textContent = `$${image.price[0]} - $${image.price[1]} `;
-    quickviewDescription.textContent = `${image.description}`;
+    // quickviewPrice.textContent = `$${image.price[0]} - $${image.price[1]} `;
+    // quickviewDescription.textContent = `${image.description}`;
     quickviewImage.setAttribute('src', image.imagePath);
     quickviewImage.setAttribute('alt', image.name);
     displayButtons('none');

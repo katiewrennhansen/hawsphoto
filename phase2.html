@@ -1,0 +1,68 @@
+<!-- Selections for Checkout form -->
+<label for="Image Size">Select Size:
+    <select id="cart-size" name="Image Size" required>
+        <option value="">Select Size</option>
+    </select>
+</label>
+<label for="Image Layout">Select Layout:
+    <select id="cart-layout" name="Image Layout" required>
+        <option value="">Select Layout</option>
+    </select>
+</label>
+<label for="Calculared Price">Calculated Price:
+    <input type="text" id="cart-price" name="Calculated Price" disabled>
+</label>
+
+<!-- JS for cart options -->
+<!--
+const checkoutForm = document.querySelector('.checkout form');
+const cartSize = document.querySelector('select[id="cart-size"]');
+const cartLayout = document.querySelector('select[id="cart-layout"]');
+const cartPrice = document.querySelector('input[id="cart-price"]');
+const cartProducts = document.querySelector('.cart-products');
+const addNewItemBtn = document.querySelector('.add-new-item-btn');
+ //if options are already populating the select menu, remove them
+function removeOptions(selectOption){
+    const length = selectOption.options.length - 1;
+    for(let i = length; i >= 0; i--) {
+        selectOption.remove(i);
+    }
+}
+
+function populateSizeLayout(image){
+    //remove current options
+    removeOptions(cartSize);
+    removeOptions(cartLayout);
+
+    //loop through new data and create new options
+    image.sizes.forEach(size => createOptions(size, cartSize));
+    image.layout.forEach(layout => createOptions(layout, cartLayout));
+}
+
+//update data on change
+cartImage.addEventListener('change', function(e){
+    let selectedImageData = images.find(image => e.target.value === image.name);
+    populateSizeLayout(selectedImageData);
+    cartPrice.setAttribute('value', selectedImageData.price[0]);
+}); -->
+
+
+
+
+<!-- Quickview Select Options -->
+<form class="modal-form">
+    <div class="form-option">
+        <label for="sizing-options">Size Options: </label>
+        <select id="sizing-options" name="sizing-options" required>
+            <option>12x13</option>
+            <option>12x15</option>
+        </select>   
+    </div>
+    <div class="form-option">
+        <label for="view-options">View Options: </label>
+        <select id="view-options" name="view-options" required>
+            <option value="landscape">Landscape</option>
+            <option value="portrait">Portrait</option>
+        </select>
+    </div>
+</form>

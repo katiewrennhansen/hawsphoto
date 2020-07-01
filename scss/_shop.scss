@@ -86,7 +86,14 @@
         }
     }
 }
-
+.modal-content {
+    h2 {
+        text-align: left;
+    }
+}
+.contact-btn {
+    margin-top: 30px;
+}
 .add-to-cart-btn {
     border: 1px solid $main-color;
     background-color: $main-color;
