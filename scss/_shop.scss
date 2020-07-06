@@ -57,13 +57,17 @@
                 display: none;
             }
             .modal-content {
+                h2 {
+                    text-align: left;
+                }
                 form {
                     margin: 20px 0;
                     label {
                         font-size: 14px;
                     }
                 }
-                .shipping-policy {
+                .shipping-policy,
+                .pricing-policy {
                     font-size: 14px;
                     margin: 30px 0 0 0;
                     h4 {
@@ -84,11 +88,6 @@
                 }
             }
         }
-    }
-}
-.modal-content {
-    h2 {
-        text-align: left;
     }
 }
 .contact-btn {

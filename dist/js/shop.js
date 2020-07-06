@@ -68,5 +68,3 @@ function createProductItem(image){
 
 //event listener to close modal on click
 quickviewCloseIcon.addEventListener('click', closeModal);
-
-
