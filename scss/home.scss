@@ -226,6 +226,8 @@ form {
             color: $main-color;
             transition: all 300ms linear;
             &:hover {
+                transition: all 300ms linear;
+                color: $hover-color;
                 i, 
                 .icon-title {
                     color: $hover-color;
@@ -235,6 +237,7 @@ form {
             i {
                 font-size: 25px;
                 color: $main-color;
+                transition: all 300ms linear;
             }
             .icon-title {
                 font-size: 12px;
