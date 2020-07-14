@@ -246,3 +246,16 @@
         }
     }
 }
+
+
+@media (min-width: 1500px){
+    .modal-open {
+        .quickview-modal {
+            .modal-flex-container {
+                .quickview-image-container {
+                    width: 40%;
+                }
+            }
+        }
+    }    
+}

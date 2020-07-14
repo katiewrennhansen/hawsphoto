@@ -143,5 +143,32 @@ const images = [
         price: [],
         sizes: [],
         layout: []
+    },
+    {
+        id: 17,
+        name: 'Wander Lust',
+        imagePath: 'images/wander_lust.jpg',
+        description: '',
+        price: [],
+        sizes: [],
+        layout: []
+    },
+    {
+        id: 18,
+        name: 'Overgrown',
+        imagePath: 'images/overgrown.jpg',
+        description: '',
+        price: [],
+        sizes: [],
+        layout: []
+    },
+    {
+        id: 19,
+        name: 'Storm Break',
+        imagePath: 'images/storm_break.jpg',
+        description: '',
+        price: [],
+        sizes: [],
+        layout: []
     }
 ]
